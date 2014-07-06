@@ -1,0 +1,32 @@
+@charset "URF-8";
+
+.b-search{
+
+}
+
+    .b-search__inp{
+        border:solid 2px #ccc;
+        width:210px;
+        padding:2px 4px;
+        height:18px;
+
+        -webkit-appearance:none;
+        outline:0;
+    }
+
+    .b-search__inp:focus{
+        border-color:#019baa;    }
+
+    .b-search__submit {
+        height:26px;
+        background: #fff;
+        border:solid 2px #444;
+        color:#444;
+        padding:2px 16px;
+
+        -webkit-appearance:none;
+        outline:0;
+    }
+
+    .b-search__submit:hover, .b-search__submit:active{
+        border-color:#019baa;    }

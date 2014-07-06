@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.b-icon{
+    display: inline-block;
+    background-repeat:no-repeat;
+    vertical-align: top;
+}
+
+.lt-ie8 .b-icon{
+    display: inline;
+    zoom:1;
+}
+
+.b-icon.-warranty {
+    float:left;
+    margin-left:-30px;
+    width:23px;
+    height:23px;
+    background-image: url(../images/icons/warranty.png);
+}
+
+.x2 .b-icon.-warranty {
+    background-image: url(../images/icons/warranty@x2.png);
+    background-size: cover;
+}
+
+
+.b-icon.-delivery {
+    float:left;
+    margin-left:-30px;
+    width:23px;
+    height:23px;
+    background-image: url(../images/icons/delivery.png);
+}
+
+.x2 .b-icon.-delivery {
+    background-image: url(../images/icons/delivery@x2.png);
+    background-size: cover;
+}

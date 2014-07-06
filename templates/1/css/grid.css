@@ -350,10 +350,10 @@ body {
 
 /* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
 
-.clearfix:before,
-.clearfix:after {
+.group:before,
+.group:after {
   content: '\0020';
-  display: block;
+  display: table;
   overflow: hidden;
   visibility: hidden;
   width: 0;
@@ -361,7 +361,7 @@ body {
 }
 
 .clearfix:after {
-  clear: both;
+  group: both;
 }
 
 /*
@@ -369,6 +369,6 @@ body {
   Move to separate stylesheet if invalid CSS is a problem.
 */
 
-.clearfix {
+.group {
   zoom: 1;
 }
