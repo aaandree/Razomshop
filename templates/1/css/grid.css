@@ -352,7 +352,8 @@ body {
 
 .group:before,
 .group:after {
-  content: '\0020';
+  clear:both;
+  content: ' ';
   display: table;
   overflow: hidden;
   visibility: hidden;
