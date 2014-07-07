@@ -132,12 +132,16 @@ img.right {float: right; margin: 3px 0 3px 3px;}
 }
 
 #header {
-
+    margin-bottom:18px;
 }
 
 #header p{
 	padding-top:20px;
 	font-size:18px;
+}
+
+#logo a {
+    margin-left: -10px;
 }
 
 #middle {
