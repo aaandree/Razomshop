@@ -1,0 +1,97 @@
+<!-- Шаблон карточки товара -->
+
+<!-- @item -->
+%picture% 
+%name%
+%price%
+%oldprice%
+<button onclick="window.open('http://%host%/?goto=%item_id%', 'target=_blank');return false;">
+&nbsp;&nbsp;&nbsp;Заказать %advcampaign_name_value%&nbsp;&nbsp;&nbsp;
+</button>
+%description%
+%param%
+
+	<p>
+	<script type="text/javascript">(function() {
+		if (window.pluso)if (typeof window.pluso.start == "function") return;
+	var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+	s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+	s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+	var h=d[g]('head')[0] || d[g]('body')[0];
+	h.appendChild(s);
+	})();</script>
+	<div class="pluso" data-options="small,square,line,horizontal,counter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,print" data-background="#ebebeb"></div> 
+	</p>
+
+%cat_way_block%		
+
+<h2>Покупайте со скидкой по бесплатному купону</h2>
+[#kartochka_tovara1#]
+
+<h2>Смотрите еще</h2>
+[#kartochka_tovara2#]
+
+<h2>Популярный товар</h2>
+[#kartochka_tovara3#]
+
+<!-- @name -->
+<h1>%name_value%</h1>
+
+<!-- @description -->
+<p>%description_value%</p>
+
+<!-- @model -->
+<h4>%model_value%</h4>
+
+<!-- @advcampaign_name -->
+<h4>Продавец: %advcampaign_name_value%</h4>
+
+<!-- @price -->
+<h2>%price_value% руб.
+
+
+<!-- @oldprice -->
+<!--<p class="cena1">%oldprice_value%</p>-->
+<span class="cena" style="color:red;text-decoration: line-through;">%oldprice_value% руб.
+</span>
+</h2>
+
+<!-- @picture -->
+<a onclick="window.open('http://%host%/?goto=%item_id%'); return;" href="%picture_orig_1_value%" class="jqzoom" rel='gal1 %item_id%' title="%name_value%">
+<img src="%picture_value%" style="float:left; margin:0 10px 10px 0" border="0" alt="%name_value%" title="%name_value%"/>
+</a>
+
+<!-- @param -->
+<p>%param_value%</p>
+
+<!-- @param_null -->
+
+
+<!-- Возможные значения из выгрузки
+<img src="%thumbnail_value%" width="200" width="200" border="0" alt="%name_value%" title="%name_value%"/>
+<img src="%picture_value%" width="200" width="200" border="0" alt="%name_value%" title="%name_value%"/>
+<img src="%picture_orig_value%" width="200" width="200" border="0" alt="%name_value%" title="%name_value%"/>
+-->
+
+<!-- @name_null -->
+
+<!-- @description_null -->
+
+<!-- @Cena_null -->
+
+<!-- @picture_null -->
+<!-- @oldprice_null -->
+</h2>
+<!-- @row_delimeter -->
+
+<!-- @cat_way_block -->
+Все %cat_way%
+
+<!-- @cat_way_separator -->
+-&gt;
+
+<!-- @cat_way_active -->
+<b><a href="%cat_link%">%cat_name%</a></b>
+
+<!-- @cat_way_passive -->
+<a href="%cat_link%">%cat_name%</a>

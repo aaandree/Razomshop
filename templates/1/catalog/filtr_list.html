@@ -1,0 +1,108 @@
+<!--
+Шаблон списка товаров
+
+В на новой странице
+<button onclick="window.location('http://%host%/?goto=%item_id%'); return;">
+
+<a onclick="window.open('http://%host%/?goto=%item_id%'); return;" href="%picture_orig_1_value%" class="jqzoom" rel='gal1 %item_id%' title="%name_value%">
+<img src="%picture_value%" border="0" alt="%name_value%" title="%name_value%"/>
+</a>
+
+-->
+
+<!-- @list -->
+%pages%
+
+<div class="thumbnails" id="equalize">
+    %row%
+</div>
+
+%pages%
+
+
+<!-- @list_null -->
+<p>К сожалению, товар не найден.</p>
+
+<!-- @row -->
+    <ins class="thumbnail">
+        <div class="r">
+            %picture%
+			%name%
+			%price%
+			%oldprice%
+ <br/>
+<button onclick="window.open('http://%host%/?goto=%item_id%', 'target=_blank');return false;">
+  Подробнее %advcampaign_name_value%
+</button>			
+        </div>
+    </ins>
+
+<!-- @name -->
+<a href="%link%" style="text-decoration:none;">%name_value%</a>
+
+<!-- @description -->
+<p>%description_value%</p>
+
+<!-- @price -->
+<br/>%price_value% руб.
+
+<!-- @oldprice -->
+<span class="cena" style="color:red;text-decoration: line-through;">%oldprice_value% руб.</span>
+
+<!-- @picture -->
+<a onclick="window.open('http://%host%/?goto=%item_id%'); return;" href="%picture_value%" class="jqzoom" rel='gal1 %item_id%' title="%name_value%">
+<img src="%picture_value%" border="0" alt="%name_value%" title="%name_value%"/>
+</a>
+
+<!-- @name_null -->
+
+<!-- @description_null -->
+
+<!-- @Cena_null -->
+
+<!-- @picture_null -->
+
+<!-- @row_delimeter -->
+
+<!-- @pages -->
+<p>
+<center>
+%first% %backward% %previous% %pages_block% %next% %forward% %last%
+</center>
+</p>	
+<!-- @page_first -->
+
+<a rel="prev" href="%link%">←</a>
+
+<!-- @page_backward -->
+
+<!-- @page_backward_disabled -->
+
+<!-- @page_previous -->
+
+<!-- @page_previous_disabled -->
+
+<!-- @page_forward -->
+
+<!-- @page_forward_disabled -->
+
+<!-- @page_next -->
+
+<!-- @page_next_disabled -->
+
+<!-- @page_last -->
+
+<a rel="next" href="%link%">→</a>
+
+<!-- @page_active -->
+
+<a rel="next" href="%link%">%page%</a>
+
+<!-- @page_passive -->
+
+[%page%]
+
+<!-- @page_delimeter -->
+&nbsp;
+
+<!-- @page_null -->
