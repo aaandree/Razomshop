@@ -25,13 +25,15 @@
 <link rel="stylesheet" href="/templates/1/css/lib/jmenu.css" type="text/css" />
 <script type="text/javascript" src="/templates/1/js/lib/jmenu.min.js"></script>
 <script type="text/javascript">
-/*ddsmoothmenu.init({
-	mainmenuid: "smoothmenu1", //menu DIV id
-	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
-	classname: 'ddsmoothmenu', //class added to menu's outer DIV
-	//customtheme: ["#1c5a80", "#18374a"],
-	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
-})*/
+$(function(){
+    $('#menu > ul').jMenu({
+        ulWidth : 'auto',
+        effects : {
+            effectTypeOpen : 'fade',
+            effectSpeedOpen : 200,
+        }
+    });
+})
 </script>
 
 <link rel="stylesheet" href="/templates/1/css/jquery.jqzoom.css" type="text/css">
@@ -89,7 +91,7 @@ $(document).ready(function() {
             </article>
 		</div>
 	</section>
-	[#menu_footer#]
+	<!--[#menu_footer#]-->
 
 <!-- 
 Пожалуйста, не удалйте эту ссылку, мы очень стараемся, делаем макеты, обновления

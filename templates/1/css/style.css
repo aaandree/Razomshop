@@ -149,13 +149,7 @@ img.right {float: right; margin: 3px 0 3px 3px;}
 	position: relative;
 }
 
-#middle:after {
-	content: '.';
-	display: block;
-	clear: both;
-	visibility: hidden;
-	height: 0;
-}
+#menu{}
 
 #container {
 	width: 100%;

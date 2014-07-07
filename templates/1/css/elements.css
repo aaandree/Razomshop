@@ -30,3 +30,12 @@
 
     .b-search__submit:hover, .b-search__submit:active{
         border-color:#019baa;    }
+
+
+.b-menu{
+    border-top:solid 1px #ccc;
+}
+
+    .b-menu li.-current > a {
+        color:#019baa;
+    }
