@@ -19,6 +19,7 @@
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
+    border:0 none;
 
     -webkit-transition: color .3s ease;
     -moz-transition: color .3s ease;
@@ -34,12 +35,12 @@
 .jMenu li:hover > a {
     color:#fff;
     text-decoration: none;
-    background-color: #444;
+    background-color: #333;
 }
 
 .jMenu > li:hover > a {
-    position: relative;
-    top:-1px;
+/*    position: relative;
+    top:-1px;*/
 }
 
 .jMenu li ul {
@@ -71,6 +72,7 @@
     text-transform: none;
     padding: 7px;
     color:#444;
+    border:0 none;
 }
 
 .jMenu li ul li a.isParent {

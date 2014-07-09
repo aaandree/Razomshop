@@ -49,6 +49,21 @@ body {
 	margin-right: 10px;
 }
 
+.row {
+    margin-left:10px;
+    margin-right:10px;
+}
+
+.row:before,
+.row:after {
+    display: table;
+    content: '';
+}
+
+.row:after{
+    clear:both;
+}
+
 
 
 .push_1, .pull_1,
@@ -331,45 +346,3 @@ body {
 	left:-880px;
 }
 
-
-
-
-/* `Clear Floated Elements
-----------------------------------------------------------------------------------------------------*/
-
-/* http://sonspring.com/journal/clearing-floats */
-
-.clear {
-  clear: both;
-  display: block;
-  overflow: hidden;
-  visibility: hidden;
-  width: 0;
-  height: 0;
-}
-
-/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
-
-.group:before,
-.group:after {
-  clear:both;
-  content: ' ';
-  display: table;
-  overflow: hidden;
-  visibility: hidden;
-  width: 0;
-  height: 0;
-}
-
-.clearfix:after {
-  group: both;
-}
-
-/*
-  The following zoom:1 rule is specifically for IE6 + IE7.
-  Move to separate stylesheet if invalid CSS is a problem.
-*/
-
-.group {
-  zoom: 1;
-}

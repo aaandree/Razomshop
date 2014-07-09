@@ -13,9 +13,6 @@
 <link rel="stylesheet" href="/templates/1/css/style.css" type="text/css" />
 <link href="/templates/1/images/favicon.ico" rel="icon" type="x-icon" />
 
-    <link rel="stylesheet" type="text/css" href="/templates/1/Design-an-awesome-css3-search-box/css/style2.css" />
-    <link rel="stylesheet" type="text/css" href="/templates/1/Design-an-awesome-css3-search-box/css/font/font.css" />
-
 <!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
@@ -30,30 +27,14 @@ $(function(){
         ulWidth : 'auto',
         effects : {
             effectTypeOpen : 'fade',
-            effectSpeedOpen : 200,
+            effectSpeedOpen : 200
         }
     });
 })
 </script>
 
-<link rel="stylesheet" href="/templates/1/css/jquery.jqzoom.css" type="text/css">
-<script src="/templates/1/js/jquery.jqzoom-core.js" type="text/javascript"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-	$('.jqzoom').jqzoom({
-            zoomType: 'standard',  
-            lens:true,  
-            preloadImages: true,  
-            alwaysOn:false,  
-            zoomWidth: 300,  
-            zoomHeight: 300,  
-            xOffset:10,  
-            yOffset:10
-            //position:'right' 
-        });
-	//$('.jqzoom').jqzoom();
-});
-</script>
+<link rel="stylesheet" href="/templates/1/css/slider.css" type="text/css"/>
+<script src="/templates/1/js/lib/jquery.slides.min.js" type="text/javascript"></script>
 
 </head>
 <body>
@@ -79,32 +60,192 @@ $(document).ready(function() {
 
 	<section id="middle">
 
-[#categories_cat_top#]
+        [#categories_cat_top#]
 
-		<div id="container">
-			<article id="content">
-<!--
-[#grid#]					
+        <h1 class="b-header -fst -sml">
+            Выбирайте одежду и обувь из общего ассортимента нескольких онлайн-магазинов.
+            Приятных покупок.
+        </h1>
+
+        <div class="b-slider__container">
+            <div id="slider" class="b-slider">
+                <a class="b-slider__item" href="#"><img width="960" src="http://slidesjs.com/examples/standard/img/example-slide-1.jpg" alt="Photo by: Missy S Link: http://www.flickr.com/photos/listenmissy/5087404401/"></a>
+                <a class="b-slider__item" href="#"><img width="960" src="http://slidesjs.com/examples/standard/img/example-slide-2.jpg" alt="Photo by: Daniel Parks Link: http://www.flickr.com/photos/parksdh/5227623068/"></a>
+                <a class="b-slider__item" href="#"><img width="960" src="http://slidesjs.com/examples/standard/img/example-slide-3.jpg" alt="Photo by: Mike Ranweiler Link: http://www.flickr.com/photos/27874907@N04/4833059991/"></a>
+                <a class="b-slider__item" href="#"><img width="960" src="http://slidesjs.com/examples/standard/img/example-slide-4.jpg" alt="Photo by: Stuart SeegerLink: http://www.flickr.com/photos/stuseeger/97577796/"></a>
+                <a href="#" class="slidesjs-previous slidesjs-navigation"></a>
+                <a href="#" class="slidesjs-next slidesjs-navigation"></a>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+            $(function() {
+                var
+                    slider = $('#slider')
+                    ,nav
+                ;
+
+                slider.slidesjs({
+                    width: 960,
+                    height: 528,
+                    navigation: false,
+                    play: {
+                        active: false,
+                        interval: 5000,
+                        auto: true,
+                        pauseOnHover: false,
+                        restartDelay: 2500
+                    }
+                });
+
+                nav = slider.find('.slidesjs-pagination');
+                nav.css({
+                    marginLeft: (-1) * 0.5 * nav.width()
+                });
+            });
+        </script>
+
+        <article id="content">
+
+            <h2 class="b-header -upper"><a href="#">Каталог одежды и обуви</a></h2>
+
+            <div class="group">
+                <div class="grid_4">
+                    <a class="b-teaser" href="#">
+                        <div class="b-teaser__body">
+                            <div style="color:#000;font-size:32px;"><b>Модная одежда на&nbsp;каждый день</b></div>
+                        </div>
+                        <div class="b-teaser__name">Скидки</div>
+                        <img class="b-teaser__img" src="http://images.wildberries.ru/large/new/1550000/1552079-1.jpg" />
+                    </a>
+                </div>
+                <div class="grid_4">
+                    <a class="b-teaser" href="#">
+                        <div class="b-teaser__body">
+
+                        </div>
+                        <div class="b-teaser__name">Скидки</div>
+                        <img class="b-teaser__img" src="http://upload.fott.ru/upload/magazine/preview/b15/370_370_4.jpg" />
+                    </a>
+                </div>
+                <div class="grid_4">
+                    <a class="b-teaser" href="#">
+                        <div class="b-teaser__body">
+
+                        </div>
+                        <div class="b-teaser__name">Новинки</div>
+                        <img class="b-teaser__img" src="http://www.trendsbrands.ru/upload/images/a47/amAp_sm.jpg" />
+                    </a>
+                </div>
+
+                <div class="grid_4">
+                    <a class="b-teaser" href="#">
+                        <div class="b-teaser__body">
+
+                        </div>
+                        <div class="b-teaser__name">Летние вещи</div>
+                        <img class="b-teaser__img" src="http://images.wildberries.ru/large/new/1330000/1332803-1.jpg" />
+                    </a>
+                </div>
+                <div class="grid_4">
+                    <a class="b-teaser" href="#">
+                        <div class="b-teaser__body">
+
+                        </div>
+                        <div class="b-teaser__name">Спецпредложение Calvin&nbsp;Klein</div>
+                        <img class="b-teaser__img" src="http://explore.calvinklein.com/images/explore/ckplatinumlabel/home/Slivers/lookbooks/LOOKBOOKS/F14%20Men's%20Lookbook/f14_platinum_m_lkbk_204x485-2.jpg" />
+                    </a>
+                </div>
+                <div class="grid_4">
+                    <a class="b-teaser" href="#">
+                        <div class="b-teaser__body">
+
+                        </div>
+                        <div class="b-teaser__name">Собираемся в отпуск</div>
+                        <img class="b-teaser__img" src="templates/1/images/teasers/kup.png" />
+                    </a>
+                </div>
+            </div>
+
+            <h2 class="b-header -upper"><a href="#">Бренды одежды и обуви</a></h2>
+
+            <div class="b-slider__container mb72">
+                <div id="slider-brands" class="b-slider -brands">
+
+                    <div>
+                        <table>
+                            <tr>
+                                <td><a class="b-slider__item" href="#"><img src="templates/1/images/brands/levis.png" /></a></td>
+                                <td><a class="b-slider__item" href="#"><img src="templates/1/images/brands/lacoste.png" /></a></td>
+                                <td><a class="b-slider__item" href="#"><img src="templates/1/images/brands/gant.png" /></a></td>
+                                <td><a class="b-slider__item" href="#"><img src="templates/1/images/brands/selected.png" /></a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div>
+                        <table>
+                            <tr>
+                                <td><a class="b-slider__item" href="#"><img src="templates/1/images/brands/levis.png" /></a></td>
+                                <td><a class="b-slider__item" href="#"><img src="templates/1/images/brands/lacoste.png" /></a></td>
+                                <td><a class="b-slider__item" href="#"><img src="templates/1/images/brands/gant.png" /></a></td>
+                                <td><a class="b-slider__item" href="#"><img src="templates/1/images/brands/selected.png" /></a></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <a href="#" class="slidesjs-previous slidesjs-navigation"></a>
+                    <a href="#" class="slidesjs-next slidesjs-navigation"></a>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(function(){
+                    $('#slider-brands').slidesjs({
+                        width: 960,
+                        height: 80,
+                        navigation: false,
+                        pagination: false
+                    });
+                });
+            </script>
+
+
+            <!--
 [#content1#]
 [#content2#]
 [banner_footer#]-->
-            </article>
-		</div>
+        </article>
+
 	</section>
 	<!--[#menu_footer#]-->
 
-<!-- 
-Пожалуйста, не удалйте эту ссылку, мы очень стараемся, делаем макеты, обновления
-для развития и роста нам очень важна эта ссылка, спасибо!
-<p align="right">На платформе <a href="http://www.cpasoft.ru">CPASoft.Ru</a>
+    <footer id="footer">
+        <div class="row b-footer__menu">
+            <div class="grid_3 alpha">
+                <div class="b-footer__head"><a href="#">Женская одежда</a></div>
+                <ul>
+                    <li><a href="#">Верхняя одежда</a></li>
+                    <li><a href="#">Блузки</a></li>
+                    <li><a href="#">джинсы</a></li>
+                </ul>
+            </div>
+            <div class="grid_3">
+                <div class="b-footer__head"><a href="#">Мужская одежда</a></div>
+                <ul>
+                    <li><a href="#">Верхняя одежда</a></li>
+                    <li><a href="#">Обувь</a></li>
+                    <li><a href="#">Джинсы</a></li>
+                </ul>
+            </div>
+            <div class="grid_3"></div>
+        </div>
+        <div class="row">
+            <div class="f-left">Razomshop. Вся одежда в одном магазине.</div>
+            <div class="f-right"><p align="right">На платформе <a href="http://www.cpasoft.ru">CPASoft.Ru</a></div>
+        </div>
 
-<!--LiveInternet counter-->
 
-<!-- Место для кода счетчика -->
+    </footer>
 
-<!--/LiveInternet-->
-	
-<!--</p>-->
+
 
 </div>
 </body>
