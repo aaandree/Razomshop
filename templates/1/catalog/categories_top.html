@@ -2,7 +2,7 @@
 <nav id="main-menu">
   <ul class="sf-menu grid_12">
     <!-- @@nextlevel -->
-    <ul>
+    <ul class="b-menu">
 <!-- @link -->
 <li><a href="#">первый уровень<span class="indicator">&nbsp;</span></a>
     <!-- @@nextlevel -->
@@ -50,14 +50,14 @@
 </nav> 
 
 <!-- @begin -->
-<div id="menu" class="b-menu">
-<ul>
+<div id="menu" class="b-menu group">
+<ul class="b-menu__level0">
     <!-- @@nextlevel -->
     <ul>
 <!-- @link -->
-<li><a href="%link%" title="%name_value%">%name_value%</a> 
+<li><a class="b-menu__top" href="%link%" title="%name_value%">%name_value%</a>
     <!-- @@nextlevel -->
-<li><a href="%link%" title="%name_value%">%name_value%</a> 
+<li><a href="%link%" title="%name_value%">%name_value%</a>
 <!-- @activelink -->
 <li class="-current"><a href="%link%" title="%name_value%">%name_value%</a>
     <!-- @@nextlevel -->

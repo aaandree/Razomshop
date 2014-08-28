@@ -1,8 +1,12 @@
 .jMenu {
-    display: table;
+    display: block;
     margin: 0;
     padding: 0;
     list-style: none;
+}
+
+.jMenu ul {
+    display: table;
 }
 
 .jMenu li {
@@ -52,11 +56,11 @@
     list-style: none;
     background-color: #fff;
 
-    top: 41px !important;
+    top: 43px !important;
     left:0 !important;
     width:100% !important;
 
-    box-shadow: 0 0 2px #ccc;
+    border-bottom:solid 1px #000;
 }
 
 .no-boxshadow .jMenu li ul {
