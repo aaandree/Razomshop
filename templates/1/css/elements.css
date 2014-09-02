@@ -41,18 +41,6 @@ cyan : #019baa rgba(1, 155, 170, 1)
     .b-search__submit:hover, .b-search__submit:active{
         border-color:#019baa;    }
 
-
-.b-menu{
-    border-top:solid 1px #333;
-    border-bottom:solid 1px #333;
-    margin-bottom:18px;
-}
-
-    .b-menu li.-current > a {
-        color:#019baa;
-    }
-
-
 .b-teaser{
     display:block;
     position:relative;

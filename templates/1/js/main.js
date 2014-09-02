@@ -10,3 +10,7 @@ $(function() {
         }
     });
 });
+
+/*main namespace*/
+
+var rs = {};
