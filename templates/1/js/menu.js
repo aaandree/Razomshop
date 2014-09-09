@@ -1,3 +1,5 @@
+"use strict";
+
 rs.menu = function(){
 
     var self = this;
@@ -25,11 +27,11 @@ rs.menu = function(){
 
     this.open = function(o){
         this.closeAll();
-        o.children('ul').show();
+        o.children('ul').show().addClass('-opened');
     };
 
     this.closeAll = function(){
-      this.html.level1.hide();
+      this.html.level1.hide().removeClass('-opened');
     };
 
     this.init = function(){
