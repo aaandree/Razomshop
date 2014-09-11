@@ -1,0 +1,72 @@
+<!-- @content -->
+<h1>[#title#]</h1>
+
+%rows%
+
+%pages%
+<!-- @rows -->
+<div class="content-block">
+						<h3><a href="%url%" title="%header%">%header%</a></h3>
+						<p>%description_short% | %date%</p>
+						<p><a href="%url%" class="more" title="%header%">Подробнее</a></p>
+</div>				
+<!-- @no_data -->
+<!-- Тут то, что выводится на случай если нужно выводить когда в базе нет новостей -->
+<!-- @page_no -->
+
+<!-- @pages -->
+<center>
+<div class="pages">
+%first% %backward% %previous% %pages_block% %next% %forward% %last%
+</div>
+</center>
+<!-- @page_first -->
+<a href="%url%">←</a>
+<!-- @page_first_disabled -->
+
+<!-- @page_backward-->
+
+<!-- @page_backward_disabled-->
+
+<!-- @page_previous-->
+
+<!-- @page_previous_disabled-->
+
+<!-- @page_forward-->
+
+<!-- @page_forward_disabled-->
+
+<!-- @page_next-->
+
+<!-- @page_next_disabled-->
+
+<!-- @page_last -->
+<a href="%url%">→</a>
+<!-- @page_last_disabled -->
+
+<!-- @page_active -->
+<a href="%url%">%page%</a>
+<!-- @page_passive -->
+<a>%page%</a>
+<!-- @page_delimeter -->
+
+
+<!-- @fulltext -->
+			<h1>%header%</h1>
+<!-- %image% -->	
+			%description_full%
+<p>			
+<noindex>
+<script type="text/javascript">(function() {
+ if (window.pluso)if (typeof window.pluso.start == "function") return;
+ var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+ s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+ s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+ var h=d[g]('head')[0] || d[g]('body')[0];
+ h.appendChild(s);
+})();</script>
+<div class="pluso" data-options="small,square,line,horizontal,counter,theme=04" data-services="vkontakte,odnoklassniki,facebook,twitter,google,moimir,email,print" data-background="#ebebeb"></div> 
+</noindex> 
+</p>
+<p><a href="/modules/newsi/rss.php">RSS новостей</a></p>
+			<p align="right">%date% <br/>%author% %source%</p>

@@ -1,0 +1,51 @@
+<!-- @list -->
+
+<div class="block-listing">
+	<ul>
+    %row%
+  </ul>
+</div>
+
+<!-- @row -->
+<li>
+<div class="adm-store-item">
+	<div class="adm-si-panel">
+
+    %picture%
+  
+    %name%
+
+    <div class="uk-clearfix adm-si-priceblock">
+      %price%
+      %oldprice%
+    </div>      
+
+	</div>
+  
+</div>
+</li>
+
+<!-- @list_null -->
+<p>Сожалеем, но пока тут пусто</p>
+
+<!-- @name -->
+<div class="adm-si-name"><a href="%link%" title="%name_value%">%name_value%</a></div>
+
+<!-- @description -->
+<p>%description_value%</p>
+
+<!-- @price -->
+<div class="adm-price-value"><span class="adm-actual-price">%price_value%</span> <sup>руб.</sup></div>
+
+<!-- @oldprice -->
+<div class="adm-price-value"><span class="adm-old-price">%oldprice_value%</span> <sup>руб.</sup></div>
+
+<!-- @picture -->
+  <div class="adm-si-image uk-text-center">
+    <div class="adm-si-infoblock">
+      <div class="adm-si-name-full"><a href="%link%">%name_value%</a></div>
+			<div class="adm-si-preview"><a type="button" data-preview-link="%link%" class="adm-preview-button"><i class="fa fa-eye"></i><span>Увеличить</span></a></div> 
+			<div class="adm-si-buy"><a type="button" data-buy-link="http://%host%/?goto=%item_id%" class="adm-buy-button"><i class="fa fa-shopping-cart"></i><span>Подробнее в магазине</span></a></div> 
+    </div>      
+    <img src="%picture_value%" alt="%name_value%" class="uk-responsive-width" title="%name_value%" />
+  </div>

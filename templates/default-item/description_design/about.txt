@@ -1,0 +1,4 @@
+Шаблон №1<br/>
+Демо <a href="http://catalog1.cpasoft.ru" target="_blank">www.catalog1.cpasoft.ru</a><br/>
+Простой макет в светлых тонах<br/>
+Рекомендуемый размер загружаемых изображений 240*400 px
