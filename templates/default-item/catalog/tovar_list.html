@@ -1,11 +1,11 @@
 <!-- @list -->
 
-<div class="act-units">
+<div class="group">
       
-	<div class="act-unit-25 act-padding-right">
+	<div class="grid_3">
 
 		<div class="uk-panel uk-hidden-small">
-<form method="get" action="%current_page_url%" class="uk-form adm-product-filter">
+          <form method="get" action="%current_page_url%" class="uk-form adm-product-filter">
           <input type="hidden" name="filterid" value="common">
           <input type="hidden" id="min_price" value="%min_price%">
           <input type="hidden" id="max_price" value="%max_price%">
@@ -53,32 +53,28 @@
 [#categories_left#]      
       
 	</div>
-	<div class="act-unit-75">
+	<div class="grid_9">
 
-    <div class="act-panel act-panel-category">
-      %category_name%
-      %category_description_cat%
-    </div>
-    
-    	<div class="act-units category-pagination m-b-s">
-      	<div class="act-unit-70">
-    			%pages% &nbsp;
+    <div class="group">
+      	<div class="grid_5 alpha">
+            %category_name%
+            %category_description_cat%
         </div>
-      	<div class="act-unit-30 t-a-r">
+      	<div class="grid_4 omega t-right">
           <select class="inputbox" id="selectsort">
             <option value="">Сортировать</option>
             <option data-sb="price" data-so="DESC" value="%current_page_url%sb=price&amp;so=DESC">Дороже &darr;</option>
-            <option data-sb="price" data-so="ASC" value="%current_page_url%sb=price&amp;so=ASC">Дешевле &uarr;</option>         
+            <option data-sb="price" data-so="ASC" value="%current_page_url%sb=price&amp;so=ASC">Дешевле &uarr;</option>
             <option data-sb="name" data-so="DESC" value="%current_page_url%sb=name&amp;so=ASC">По названию (А-Я)</option>
             <option data-sb="name" data-so="ASC" value="%current_page_url%sb=name&amp;so=DESC">По названию (Я-А)</option>
           </select>
         </div>
       </div>
-    
-    
-    
-      <div class="catalog-listing m-t-s">
-      	<ul>
+
+
+
+      <div class="m-t-s">
+      	<ul class="b-catalog-items">
           %row%
         </ul>
       </div>
@@ -90,20 +86,31 @@
       	<div class="act-unit-30">
         </div>
       </div>
+
+        %category_name_down%
+        %category_description_cat_down%
     
 	
   		[#category-comments#]
   
   </div>
-      
+
 </div>
 
 <!-- @category_name -->
-<h1 class="act-category-title clearfixin">%category_name_value%</h1>
+<h1 class="b-category__title">%category_name_value%</h1>
 
 <!-- @category_description_cat -->
-<div class="act-category-description">
-%category_description_cat_value%
+<div class="b-category__description">
+    %category_description_cat_value%
+</div>
+
+<!-- @category_name_down -->
+<div class="b-category__title -down">%category_name_value%</div>
+
+<!-- @category_description_cat_down -->
+<div class="b-category__description">
+    %category_description_cat_value%
 </div>
 
 
@@ -122,53 +129,44 @@
 
 <!-- @row -->
 <li>
-  <div class="adm-store-item">
-    <div class="adm-si-panel">
-  
-      %picture%
-    
-      %name%
-  
-      <div class="uk-clearfix adm-si-priceblock">
-        %price%
-        %oldprice%
-      </div>      
-  
-    </div>
-    
-  </div>
+
+    <a class="b-catalog-item" href="%link%" title="%name_value%">
+        %picture%
+        <div class="b-catalog-item__inner">
+            %vendor%
+            %name%
+            %oldprice%
+            %price%
+        </div>
+    </a>
+
 </li>
 <!-- @description -->
-%description_value%
+<div class="b-catalog-item__desc">%description_value%</div>
 
 <!-- @currencyId -->
 %currencyId_value%
 
 <!-- @price -->
-<div class="adm-price-value"><span itemprop="price" class="adm-actual-price">%price_value%</span> <sup>руб.</sup></div>
+<div class="b-catalog-item__price"><span itemprop="price">%price_value%</span> <span class="b-catalog-item__currency">руб.</span></div>
 
 <!-- @oldprice -->
-<div class="adm-price-value"><span itemprop="price" class="adm-old-price">%oldprice_value%</span> <sup>руб.</sup></div>
+<div class="b-catalog-item__price"><span class="adm-old-price">%oldprice_value%</span> <sup>руб.</sup></div>
 
 <!-- @picture -->
-  <div class="adm-si-image uk-text-center">
-    <div class="adm-si-infoblock">
-      <div class="adm-si-name-full"><a href="%link%">%name_value%</a></div>
-			<div class="adm-si-preview"><a type="button" data-preview-link="%link%" class="adm-preview-button"><i class="fa fa-eye"></i><span>Увеличить</span></a></div> 
-			<div class="adm-si-buy"><a type="button" data-buy-link="http://%host%/?goto=%item_id%" class="adm-buy-button"><i class="fa fa-shopping-cart"></i><span>Подробнее в магазине</span></a></div> 
-    </div>      
-    <img itemprop="image" src="%picture_value%" alt="%name_value%" class="act-responsive-width" title="%name_value%" />
-  </div>      
+<div class="b-catalog-item__picture">
+    <img itemprop="image" src="%picture_value%" alt="%name_value%" title="%name_value%" />
+    <div class="b-catalog-item__zoom"><span>Увеличить</span></div>
+</div>
 
 <!-- @name -->
-<div class="adm-si-name"><a href="%link%" title="%name_value%">%name_value%</a></div><meta itemprop="name" content="%name_value%" >
+<div class="b-catalog-item__name">%name_value%</div><meta itemprop="name" content="%name_value%" >
 
 <!-- @vendor -->
-<div class="si-vendor"><span itemprop="brand">%vendor_value%</span></div>
+<div class="b-catalog-item__vendor"><span itemprop="brand">%vendor_value%</span></div>
 
 <!-- @advcampaign_name -->
-<div class="si-advcampaign"><span>Магазин:</span> %advcampaign_name_value%</div>
-
+<div class="b-catalog-item__advcampaign">Магазин: %advcampaign_name_value%</div>
 
 <!-- @name_null -->
 
@@ -181,8 +179,8 @@
 <!-- @row_delimeter -->
 
 <!-- @pages -->
-  <div class="catalog-pagination">
-    <ul class="uk-pagination">
+  <div class="b-catalog__pagination">
+    <ul>
       %first% %previous% %pages_block% %next% %last%
     </ul>
   </div>
@@ -192,7 +190,7 @@
 <!-- @page_backward -->
 <li><a href="%link%"><i class="fa fa-angle-left"></i></a></li>
 <!-- @page_backward_disabled -->
-<li class="disabled"><span><i class="fa fa-angle-left"></i></span></li>
+<li class="-disabled"><span><i class="fa fa-angle-left"></i></span></li>
 <!-- @page_previous -->
 <li><a href="%link%"><i class="fa fa-angle-left"></i></a></li>
 <!-- @page_previous_disabled -->
@@ -204,12 +202,12 @@
 <!-- @page_next -->
 <li><a href="%link%"><i class="fa fa-angle-right"></i></a></li>
 <!-- @page_next_disabled -->
-<li class="disabled"><span><i class="fa fa-angle-right"></i></span></li>
+<li class="-disabled"><span><i class="fa fa-angle-right"></i></span></li>
 <!-- @page_last -->
 <li><a href="%link%"><i class="fa fa-angle-double-right"></i></a></li>
 <!-- @page_active -->
 <li><a href="%link%">%page%</a></li>
 <!-- @page_passive -->
-<li class="active"><span>%page%</span></li>
+<li class="-active"><span>%page%</span></li>
 <!-- @page_delimeter -->
 <!-- @page_null -->

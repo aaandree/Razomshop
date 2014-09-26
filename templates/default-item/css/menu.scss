@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-
-
 .b-menu{
     position: relative;
     height:1%;
@@ -127,9 +125,13 @@
     color:#019baa;
 }
 
+.b-menu li:nth-child(2).-current > a {
+  color:#c00000;
+}
+
 .b-menu__level0 > li:hover > a {
-    color:#fff;
-    background: #019baa;
+    color:#fff !important;
+    background: #000;
 }
 
 .b-menu__level0 > li > ul > li{
@@ -151,4 +153,5 @@
 .b-menu__level0 li ul li ul li a {
     display:block;
     padding:3px 0;
+    border-bottom:0;
 }
