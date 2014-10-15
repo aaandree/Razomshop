@@ -4,26 +4,28 @@
       
 	<div class="grid_3">
 
-		<div class="uk-panel uk-hidden-small">
-          <form method="get" action="%current_page_url%" class="uk-form adm-product-filter">
-          <input type="hidden" name="filterid" value="common">
-          <input type="hidden" id="min_price" value="%min_price%">
-          <input type="hidden" id="max_price" value="%max_price%">
-          <input type="hidden" id="sortby" name="sort" value="%sortby%">
-          <input type="hidden" id="sortorder" name="order" value="%sortorder%">
-					
-          <div class="price-range-slider">
-            <div class="t-a-c m-b-s">Цена</div>
-            <div id="price-selector"></div>
-            <div class="clearfixin">
-              <div class="pf-wrapper clearfixin"><span>от</span>
-                <input type="text" name="pf" value="%pricefrom%" class="uk-form-small">
-              </div>
-              <div class="pt-wrapper clearfixin"><span>до</span>
-                <input type="text" name="pt" value="%priceto%" class="uk-form-small">
-              </div>
-            </div>
-          </div>
+        <div class="b-filterpanel">
+            <form method="get" action="%current_page_url%" class="uk-form adm-product-filter">
+                <input type="hidden" name="filterid" value="common">
+                <input type="hidden" id="min_price" value="%min_price%">
+                <input type="hidden" id="max_price" value="%max_price%">
+                <input type="hidden" id="sortby" name="sort" value="%sortby%">
+                <input type="hidden" id="sortorder" name="order" value="%sortorder%">
+
+                <div class="b-filterpanel__group">
+                    <div class="b-filterpanel__name">Цена</div>
+                    <div class="b-filterpanel__rangeslider">
+                        <div id="price-selector"></div>
+                        <div class="group">
+                            <div class="l-left">
+                                <input type="text" name="pf" value="%pricefrom%" class="b-input">₽
+                            </div>
+                            <div class="l-right t-right">
+                                <input type="text" name="pt" value="%priceto%" class="b-input">₽
+                            </div>
+                        </div>
+                    </div>
+                </div>
 					
           <div class="search-box vendor-box">
             <div class="filter-input"><input class="filter-listing" type="text" placeholder="Поиск производителя" id="vendor-search"></div>

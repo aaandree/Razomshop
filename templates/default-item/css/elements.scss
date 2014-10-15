@@ -21,17 +21,9 @@ cyan : #019baa rgba(1, 155, 170, 1)
 }
 
     .b-search__inp{
-        border:solid 2px #ccc;
         width:200px;
-        padding:2px 4px;
         height:26px;
-
-        -webkit-appearance:none;
-        outline:0;
     }
-
-    .b-search__inp:focus{
-        border-color:#019baa;    }
 
     .b-search__submit {
         height:26px;
@@ -196,4 +188,16 @@ cyan : #019baa rgba(1, 155, 170, 1)
 
 .b-breadcrumbs ul li a:hover {
     /*color: #ec183e;*/}
+
+.b-input {
+  border: solid 2px #ccc;
+  padding: 2px 4px;
+  height: 26px;
+  -webkit-appearance: none;
+  outline: 0;
+
+  &:focus {
+    border-color: #019baa;
+  }
+}
 

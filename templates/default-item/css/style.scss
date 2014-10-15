@@ -3,6 +3,8 @@
 @import 'normalize.scss';
 
 @import 'fonts.scss';
+@import 'grid.scss';
+@import 'layout.scss';
 @import 'icons.scss';
 @import 'payment_systems.scss';
 
@@ -51,7 +53,7 @@ body {
 	background: #fff;
 	font-size: 14px;
 	line-height: 1.5;
-	font-family: Roboto, Tahoma, sans-serif;
+	font-family: 'PT Open', Roboto, Tahoma, sans-serif;
 	color: #333;
 }
 
