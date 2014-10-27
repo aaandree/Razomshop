@@ -23,28 +23,32 @@
 
 </head>
 <body>
-<div id="wrapper" class="wrapper">
-<header id="header" class="group">
-    <div id="logo" class="grid_3 pt18">
-        <a href="/" title=""><img src="/templates/default-item/images/logo.png" width="122" height="83" alt="Razomshop – вся одежда в одном магазине"/></a>
-    </div>
-    <div class="grid_4 pt36">
-        <div>Вся одежда в одном магазине</div>
-        <form class="b-search mt9" action="/catalog/search/">
-            <input class="b-input b-search__inp" type="text" name="search" placeholder="Название товара" />
-            <input class="b-search__submit" type="submit" value="Искать" />
-        </form>
-    </div>
-    <div class="grid_2 push_1 pt36">
-        <i class="b-icon -delivery"></i>Доставка по всей России
-    </div>
-    <div class="grid_2 push_1 pt36">
-        <i class="b-icon -warranty"></i>Гарантия возврата 365&nbsp;дней
-    </div>
-</header>
+<div id="wrapper">
+    <header id="header" class="b-pageheader">
+        <div class="wrapper">
+            <div class="group mb18">
+                <div id="logo" class="grid_3 pt18">
+                    <a href="/" title=""><img src="/templates/default-item/images/logo.png" width="122" height="83" alt="Razomshop – вся одежда в одном магазине"/></a>
+                </div>
+                <div class="grid_4 pt36">
+                    <div>Вся одежда в одном магазине</div>
+                    <form class="b-search mt9" action="/catalog/search/">
+                        <input class="b-input b-search__inp" type="text" name="search" placeholder="Название товара" />
+                        <input class="b-search__submit" type="submit" value="Искать" />
+                    </form>
+                </div>
+                <div class="grid_2 push_1 pt36">
+                    <i class="b-icon -delivery"></i>Доставка по всей России
+                </div>
+                <div class="grid_2 push_1 pt36">
+                    <i class="b-icon -warranty"></i>Гарантия возврата 365&nbsp;дней
+                </div>
+            </div>
+            [#categories_cat_top#]
+        </div>
+    </header>
 
-<section id="middle">
-    [#categories_cat_top#]
+<section id="middle" class="wrapper">
 
     [#breadcrumbs#]
 

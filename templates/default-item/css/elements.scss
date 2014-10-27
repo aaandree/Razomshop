@@ -5,6 +5,7 @@
 gray : #ccc
 black : #333 rgba(51, 51, 51, 1)
 cyan : #019baa rgba(1, 155, 170, 1)
+blue: #00a8e6
 
 */
 
@@ -23,6 +24,21 @@ cyan : #019baa rgba(1, 155, 170, 1)
     .b-search__inp{
         width:200px;
         height:26px;
+
+      &:hover, &:focus{
+        border-color:#019baa;
+      }
+
+
+      .b-pageheader & {
+        border-color:#fff;
+        background:none;
+
+        &:hover, &:focus{
+          border-color:#019baa;
+        }
+      }
+
     }
 
     .b-search__submit {
@@ -34,10 +50,21 @@ cyan : #019baa rgba(1, 155, 170, 1)
 
         -webkit-appearance:none;
         outline:0;
-    }
 
-    .b-search__submit:hover, .b-search__submit:active{
-        border-color:#019baa;    }
+        &:hover{
+          border-color:#019baa;
+        }
+
+        .b-pageheader &{
+          border-color:#fff;
+          background: none;
+          color:#fff;
+          &:hover{
+            border-color:#019baa;
+          }
+        }
+
+    }
 
 .b-teaser{
     display:block;
@@ -161,7 +188,7 @@ cyan : #019baa rgba(1, 155, 170, 1)
 
 
 .b-breadcrumbs{
-    margin:36px 0;
+    margin:36px 0 6px;
 
     & .-current{
         font-weight:bold;
@@ -178,7 +205,8 @@ cyan : #019baa rgba(1, 155, 170, 1)
     float: left;
     margin-right: 3px;}
 
-.b-breadcrumbs li + li:before {
+.b-breadcrumbs li + li:before,
+.b-breadcrumbs li:last-child:after {
     content: " / ";
     top: 0;}
 
