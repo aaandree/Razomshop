@@ -38,6 +38,19 @@
     background-size: cover;
 }
 
+.b-icon.-basket {
+  width:32px;
+  height:32px;
+  background-image: url(../images/icons/basket.png);
+  vertical-align: -9px;
+  margin-right:14px;
+}
+
+.x2 .b-icon.-basket {
+  background-image: url(../images/icons/basket@x2.png);
+  background-size: cover;
+}
+
 /*--fa--*/
 
 .fa {

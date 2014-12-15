@@ -41,30 +41,17 @@ blue: #00a8e6
 
     }
 
-    .b-search__submit {
-        height:26px;
-        background: #fff;
-        border:solid 2px #333;
-        color:#333;
-        padding:2px 16px;
 
-        -webkit-appearance:none;
-        outline:0;
-
-        &:hover{
-          border-color:#019baa;
-        }
-
-        .b-pageheader &{
-          border-color:#fff;
-          background: none;
-          color:#fff;
-          &:hover{
-            border-color:#019baa;
-          }
-        }
-
+    .b-pageheader .b-btn{
+      border-color:#fff;
+      background: none;
+      color:#fff;
+      &:hover{
+        border-color:#019baa;
+      }
     }
+
+
 
 .b-teaser{
     display:block;
@@ -188,7 +175,7 @@ blue: #00a8e6
 
 
 .b-breadcrumbs{
-    margin:36px 0 6px;
+    margin:36px 0 18px;
 
     & .-current{
         font-weight:bold;
@@ -227,5 +214,23 @@ blue: #00a8e6
   &:focus {
     border-color: #019baa;
   }
+}
+
+.b-btn {
+  height:26px;
+  line-height:20px;
+  background-color: transparent;
+  border:solid 2px #019baa;
+  color:#019baa;
+  padding:2px 16px;
+
+  -webkit-appearance:none;
+  outline:0;
+
+  &:hover{
+    border-color:#02c1d3;
+    color:#02c1d3;
+  }
+
 }
 

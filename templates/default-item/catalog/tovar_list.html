@@ -10,6 +10,8 @@
 	<div class="grid_3">
 
         <div class="b-filterpanel">
+            [#categories_left#]
+
             <form method="get" action="%current_page_url%" class="uk-form adm-product-filter">
                 <input type="hidden" name="filterid" value="common">
                 <input type="hidden" id="min_price" value="%min_price%">
@@ -32,37 +34,33 @@
                     </div>
                 </div>
 					
-          <div class="search-box vendor-box">
-            <div class="filter-input"><input class="filter-listing" type="text" placeholder="Поиск производителя" id="vendor-search"></div>
-            <div id="vendor-list" class="contentHolder">
-              <div class="content">
-                <ul id="vendor-names">%vendorsdata%</ul>
-              </div>
-            </div>
-            <p id="vendor-backup" style="display:none"></p>
-          </div>
-          
-          <div class="search-box shops-box">
-            <div class="filter-input"><input  class="filter-listing" placeholder="Поиск магазина" type="text" id="shops-search"></div>
-            <div id="shops-list" class="contentHolder">
-              <div class="content">
-                <ul id="shops-names">%shopsdata%</ul>
-              </div>
-            </div>
-            <p id="shops-backup" style="display:none"></p>
-          </div>
+              <div class="b-filterpanel__group">
+                <div class="b-filterpanel__group__search"><input class="b-input" type="text" placeholder="Поиск производителя" id="vendor-search"></div>
+                <div id="vendor-list">
 
-          <button class="filter-button act-button" type="submit">Искать</button> 
-        </form>
+                    <ul id="vendor-names" class="b-filterlist">%vendorsdata%</ul>
+
+                </div>
+                <p id="vendor-backup" style="display:none"></p>
+              </div>
+
+              <div class="b-filterpanel__group">
+                <div class="b-filterpanel__group__search"><input  class="b-input" placeholder="Поиск магазина" type="text" id="shops-search"></div>
+                <div id="shops-list">
+
+                    <ul id="shops-names" class="b-filterlist">%shopsdata%</ul>
+
+                </div>
+                <p id="shops-backup" style="display:none"></p>
+              </div>
+
+              <button class="b-btn" type="submit">Искать</button>
+            </form>
 		</div>
-
-      
-[#categories_left#]      
-      
 	</div>
 	<div class="grid_9">
 
-    <div class="group">
+    <div class="group mb36">
       	<div class="l-right t-right">
           <select class="inputbox" id="selectsort">
             <option value="">Сортировать</option>
@@ -76,11 +74,11 @@
 
 
 
-      <div class="m-t-s">
-      	<ul class="b-catalog-items">
+
+      	<ul class="b-catalog-items group">
           %row%
         </ul>
-      </div>
+
     
     	<div class="act-units category-pagination m-t-s m-b-s">
       	<div class="act-unit-70">
@@ -154,7 +152,7 @@
 <div class="b-catalog-item__price"><span itemprop="price">%price_value%</span> <span class="b-catalog-item__currency">руб.</span></div>
 
 <!-- @oldprice -->
-<div class="b-catalog-item__price"><span class="adm-old-price">%oldprice_value%</span> <sup>руб.</sup></div>
+<div class="b-catalog-item__price -old"><span itemprop="price">%oldprice_value%</span> <span class="b-catalog-item__currency">руб.</span></div>
 
 <!-- @picture -->
 <div class="b-catalog-item__picture">
@@ -163,7 +161,7 @@
 </div>
 
 <!-- @name -->
-<div class="b-catalog-item__name">%name_value%</div><meta itemprop="name" content="%name_value%" >
+<div class="b-catalog-item__name">%name_value%</div>
 
 <!-- @vendor -->
 <div class="b-catalog-item__vendor"><span itemprop="brand">%vendor_value%</span></div>

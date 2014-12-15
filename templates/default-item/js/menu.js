@@ -27,10 +27,12 @@ rs.menu = function(){
 
     this.open = function(o){
         this.closeAll();
+        o.addClass('-current');
         o.children('ul').show().addClass('-opened');
     };
 
     this.closeAll = function(){
+      this.html.level0.removeClass('-current');
       this.html.level1.hide().removeClass('-opened');
     };
 

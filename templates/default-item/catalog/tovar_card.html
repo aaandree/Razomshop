@@ -1,75 +1,56 @@
 <!-- @item -->
-<div class="product-page-block" itemscope itemtype="http://schema.org/Product">
-  <div class="uk-grid uk-grid-preserve">
-        
-    <div class="uk-width-7-10">
-  
-      %name%
-  
-      <div class="adm-fluid-wrapper">
-  
-        <div class="product-thumb clearfixin">%picture%      
+<div class="b-product" itemscope itemtype="http://schema.org/Product">
+  <div class="group mb36">
+
+      <div class="grid_4">%picture%</div>
+      <div class="grid_8">
+        %name%
+        %description%
+
+        %price%
+        <div class="mt18 mb36">
+            <a class="b-product__btn" href="http://%host%/?goto=%item_id%" onclick="window.open('http://%host%/?goto=%item_id%', 'target=_blank');return false;"><i class="b-icon -basket"></i>Купить в магазине</a>
         </div>
-  
-        <div class="product-info">
-          <div class="act-units">
-          </div>
-          <div class="act-units">
-            <div class="act-unit-25">%vendor%</div>
-            <div class="act-unit-25">%advcampaign_name%</div>
-          </div>
-          
-          <div class="act-units last-row">
-            <div class="act-unit-50">%price% %oldprice%</div>
-            <div class="act-unit-50"><button  class="item-buy-action" onclick="window.open('http://%host%/?goto=%item_id%', 'target=_blank');return false;"><i class="fa fa-shopping-cart"></i> Купить в магазине</button></div>
-          </div>
-          
-          %description%
-  
-          %category%
-          
-          %cat_way_block%
+        <div>
+            Доставка по всей России<br/>
+            Гарантия возврата товара <br/>
+            Можно примерить перед покупкой
         </div>
-      
+
       </div>
-      
-    </div>
+  </div>
 
-    <div class="uk-width-3-10 coupons-block">
-      [#item-coupons#]
-    </div>
-	</div>
-      
-
-    [#item-comments#]
-
-  <div class="act-tabs m-t-s m-b-s">
-  
-    <ul class="act-tab act-units">
-        <li class="act-unit-50 current">Похожие товары</li>
-        <li class="act-unit-50">Популярные товары</li>
-    </ul>
-    <div class="act-tab-panels">
-        <div class="act-tab-panel visible">[#item-similar#]</div>
-        <div class="act-tab-panel">[#item-popular#]</div>
-    </div>
-  
+  <div class="b-product_coupons-block">
+    [#item-coupons#]
   </div>
 
 </div>
+
+<div class="b-product__tabs">
+
+    <ul class="b-product__tabs-units group">
+        <li class="-current"><span>Похожие товары</span></li>
+        <li>%vendor%</li>
+    </ul>
+
+    <div class="b-product__tabs-panel">[#item-similar#]</div>
+
+</div>
+
+
 
 
 <!-- @currencyId -->
 %currencyId_value%
 
 <!-- @name -->
-<div class="product-title"><h1 itemprop="name">%name_value%</h1></div>
+<div class="b-product__title"><h1 itemprop="name">%name_value%</h1></div>
 
 <!-- @original_id -->
 артикул: %original_id_value%
 
 <!-- @description -->
-<div class="item-description" itemprop="description">%description_value%</div>
+<div class="b-product__description" itemprop="description">%description_value%</div>
 
 <!-- @model -->
 <h4>%model_value%</h4>
@@ -78,22 +59,22 @@
 Продавец: &laquo;<a title="Все товары магазина %advcampaign_name_value%" href="/catalog/search/?search=%advcampaign_name_value%">%advcampaign_name_value%</a>&raquo;
 
 <!-- @price -->
-<div class="adm-price-value" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">%price_value%</span> <sup>руб.</sup></div>
+<div class="b-catalog-item__price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">%price_value%</span> <span class="b-catalog-item__currency">руб.</span></div>
 
 <!-- @oldprice -->
-<div class="adm-price-value"><span class="adm-old-price">%oldprice_value%</span> <sup>руб.</sup></div>
+<div class="b-catalog-item__price -old"><span class="adm-old-price">%oldprice_value%</span> <span class="b-catalog-item__currency">руб.</span></div>
 
 
 <!-- @picture -->
-<div class="product-thumbnail uk-clearfix"><img class="uk-float-left" itemprop="image" src="%picture_value%" alt="%name_value%" title="%name_value%"/></div>
+<div class="b-product__thumbnail group"><img class="" itemprop="image" src="%picture_value%" alt="%name_value%" title="%name_value%"/></div>
 
 
 <!-- @category -->
-<div class="item-description">Товар относится к %category_value%</div>
+<div class="b-product__description">Товар относится к %category_value%</div>
 
 
 <!-- @vendor -->
-Бренд: &laquo;<a title="Все товары бренда %vendor_value%" href="/catalog/search/?search=%vendor_value%"><span itemprop="manufacturer">%vendor_value%</span></a>&raquo;
+<a title="Все товары бренда %vendor_value%" href="/catalog/search/?search=%vendor_value%" itemprop="manufacturer">Все товары %vendor_value%</a>
 
 <!-- @name_null -->
 

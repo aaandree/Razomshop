@@ -146,7 +146,7 @@ img.right {float: right; margin: 3px 0 3px 3px;}
 
 #header {
   color:#fff;
-  background-color: #000;
+  background-color: #444;
   margin-bottom:18px;
 }
 
@@ -392,27 +392,6 @@ background: silver;
 opacity: 0.8;
 }
 
-
-
-button, .button, a.button{
-
-  height: 31px;
-  line-height: 29px;
-  padding: 0 10px;
-  margin-bottom: 4px;
-  background: url("/templates/1/images/button_bg.jpg") repeat-x top;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-  color: #fff;
-  text-align: center;
-  text-shadow: 1px 1px #0B429D;
-  text-decoration: none;
-}
-
-button:hover, .button:hover{
-  background: #0072ae;
-}
 
 .content-block {
 clear:both;

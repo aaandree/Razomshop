@@ -1,51 +1,42 @@
 <!-- @list -->
 
-<div class="block-listing">
-	<ul>
+<div class="group">
+	<ul class="b-catalog-items">
     %row%
   </ul>
 </div>
 
 <!-- @row -->
 <li>
-<div class="adm-store-item">
-	<div class="adm-si-panel">
 
-    %picture%
-  
-    %name%
+    <a class="b-catalog-item" href="%link%" title="%name_value%">
+        %picture%
+        <div class="b-catalog-item__inner">
+            %vendor%
+            %name%
+            %oldprice%
+            %price%
+        </div>
+    </a>
 
-    <div class="uk-clearfix adm-si-priceblock">
-      %price%
-      %oldprice%
-    </div>      
-
-	</div>
-  
-</div>
 </li>
-
-<!-- @list_null -->
-<p>Сожалеем, но пока тут пусто</p>
-
-<!-- @name -->
-<div class="adm-si-name"><a href="%link%" title="%name_value%">%name_value%</a></div>
-
 <!-- @description -->
-<p>%description_value%</p>
+<div class="b-catalog-item__desc">%description_value%</div>
+
+<!-- @currencyId -->
+%currencyId_value%
 
 <!-- @price -->
-<div class="adm-price-value"><span class="adm-actual-price">%price_value%</span> <sup>руб.</sup></div>
+<div class="b-catalog-item__price"><span itemprop="price">%price_value%</span> <span class="b-catalog-item__currency">руб.</span></div>
 
 <!-- @oldprice -->
-<div class="adm-price-value"><span class="adm-old-price">%oldprice_value%</span> <sup>руб.</sup></div>
+<div class="b-catalog-item__price -old"><span itemprop="price">%oldprice_value%</span> <span class="b-catalog-item__currency">руб.</span></div>
 
 <!-- @picture -->
-  <div class="adm-si-image uk-text-center">
-    <div class="adm-si-infoblock">
-      <div class="adm-si-name-full"><a href="%link%">%name_value%</a></div>
-			<div class="adm-si-preview"><a type="button" data-preview-link="%link%" class="adm-preview-button"><i class="fa fa-eye"></i><span>Увеличить</span></a></div> 
-			<div class="adm-si-buy"><a type="button" data-buy-link="http://%host%/?goto=%item_id%" class="adm-buy-button"><i class="fa fa-shopping-cart"></i><span>Подробнее в магазине</span></a></div> 
-    </div>      
-    <img src="%picture_value%" alt="%name_value%" class="uk-responsive-width" title="%name_value%" />
-  </div>
+<div class="b-catalog-item__picture">
+    <img itemprop="image" src="%picture_value%" alt="%name_value%" title="%name_value%" />
+    <div class="b-catalog-item__zoom"><span>Увеличить</span></div>
+</div>
+
+<!-- @name -->
+<div class="b-catalog-item__name">%name_value%</div><meta itemprop="name" content="%name_value%" >
