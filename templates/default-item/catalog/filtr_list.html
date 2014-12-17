@@ -1,24 +1,13 @@
+<div class="b-pagename">Результаты поиска</div>
 
 <!-- @list -->
-    	<div class="act-units category-pagination m-b-s">
-      	<div class="act-unit-100 t-a-c">
-    			%pages%
-        </div>
-      </div>
-    
-    
-    
-      <div class="block-listing m-t-s">
-      	<ul>
-          %row%
-        </ul>
-      </div>
-    
-    	<div class="act-units category-pagination m-t-s m-b-s">
-      	<div class="act-unit-100 t-a-c">
-    			%pages%
-        </div>
-      </div>
+<div class="b-searchresult">
+    <ul class="b-catalog-items group">
+        %row%
+    </ul>
+</div>
+
+%pages%
 
 
 <!-- @list_null -->
@@ -26,45 +15,39 @@
 
 <!-- @row -->
 <li>
-<div class="adm-store-item">
-	<div class="adm-si-panel">
 
-    %picture%
-  
-    %name%
+    <a class="b-catalog-item" href="%link%" title="%name_value%">
+        %picture%
+        <div class="b-catalog-item__inner">
+            %vendor%
+            %name%
+            %oldprice%
+            %price%
+        </div>
+    </a>
 
-    <div class="uk-clearfix adm-si-priceblock">
-      %price%
-      %oldprice%
-    </div>      
-
-	</div>
-  
-</div>
 </li>
 
 <!-- @name -->
-<div class="adm-si-name"><a href="%link%" title="%name_value%">%name_value%</a></div>
+<div class="b-catalog-item__name"><a href="http://%host%/?goto=%item_id%">%name_value%</a></div>
+
+<!-- @vendor -->
+<div class="b-catalog-item__vendor"><span itemprop="brand"><a href="http://%host%/?goto=%item_id%">%vendor_value%</a></span></div>
 
 <!-- @description -->
-<p>%description_value%</p>
+<div class="b-catalog-item__desc">%description_value%</div>
 
 <!-- @price -->
-<div class="adm-price-value"><span class="adm-actual-price">%price_value%</span> <sup>руб.</sup></div>
+<div class="b-catalog-item__price"><span itemprop="price">%price_value%</span> <span class="b-catalog-item__currency">руб.</span></div>
 
 <!-- @oldprice -->
-<div class="adm-price-value"><span class="adm-old-price">%oldprice_value%</span> <sup>руб.</sup></div>
+<div class="b-catalog-item__price -old"><span itemprop="price">%oldprice_value%</span> <span class="b-catalog-item__currency">руб.</span></div>
 
 <!-- @picture -->
-  <div class="adm-si-image uk-text-center">
-    <div class="adm-si-infoblock">
-      <div class="adm-si-name-full"><a href="%link%">%name_value%</a></div>
-			<div class="adm-si-preview"><a type="button" data-preview-link="%link%" class="adm-preview-button"><i class="fa fa-eye"></i><span>Увеличить</span></a></div> 
-			<div class="adm-si-buy"><a type="button" data-buy-link="http://%host%/?goto=%item_id%" class="adm-buy-button"><i class="fa fa-shopping-cart"></i><span>Подробнее в магазине</span></a></div> 
-    </div>      
-    <img src="%picture_value%" alt="%name_value%" class="uk-responsive-width" title="%name_value%" />
-  </div>
-  
+<div class="b-catalog-item__picture">
+    <img itemprop="image" src="%picture_value%" alt="%name_value%" title="%name_value%" />
+    <div class="b-catalog-item__zoom"><span>Подробнее</span></div>
+</div>
   
 <!-- @name_null -->
 
@@ -77,11 +60,12 @@
 <!-- @row_delimeter -->
 
 <!-- @pages -->
-  <div class="catalog-pagination t-a-c">
-    <ul class="uk-pagination">
-      %first% %previous% %pages_block% %next% %last%
+<div class="b-catalog__pagination">
+    <ul>
+        %first% %previous% %pages_block% %next% %last%
     </ul>
-  </div>
+</div>
+
 
 <!-- @page_first -->
 <li><a href="%link%"><i class="fa fa-angle-double-left"></i></a></li>

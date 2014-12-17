@@ -79,21 +79,13 @@
           %row%
         </ul>
 
-    
-    	<div class="act-units category-pagination m-t-s m-b-s">
-      	<div class="act-unit-70">
-    			%pages%
-        </div>
-      	<div class="act-unit-30">
-        </div>
-      </div>
+    	%pages%
+
 
         %category_name_down%
         %category_description_cat_down%
-    
-	
-  		[#category-comments#]
-  
+
+
   </div>
 
 </div>
@@ -142,6 +134,7 @@
     </a>
 
 </li>
+
 <!-- @description -->
 <div class="b-catalog-item__desc">%description_value%</div>
 
@@ -157,14 +150,14 @@
 <!-- @picture -->
 <div class="b-catalog-item__picture">
     <img itemprop="image" src="%picture_value%" alt="%name_value%" title="%name_value%" />
-    <div class="b-catalog-item__zoom"><span>Увеличить</span></div>
+    <div class="b-catalog-item__zoom"><span>Подробнее</span></div>
 </div>
 
 <!-- @name -->
-<div class="b-catalog-item__name">%name_value%</div>
+<div class="b-catalog-item__name"><a href="http://%host%/?goto=%item_id%">%name_value%</a></div>
 
 <!-- @vendor -->
-<div class="b-catalog-item__vendor"><span itemprop="brand">%vendor_value%</span></div>
+<div class="b-catalog-item__vendor"><span itemprop="brand"><a href="http://%host%/?goto=%item_id%">%vendor_value%</a></span></div>
 
 <!-- @advcampaign_name -->
 <div class="b-catalog-item__advcampaign">Магазин: %advcampaign_name_value%</div>
@@ -180,11 +173,11 @@
 <!-- @row_delimeter -->
 
 <!-- @pages -->
-  <div class="b-catalog__pagination">
+<div class="b-catalog__pagination">
     <ul>
       %first% %previous% %pages_block% %next% %last%
     </ul>
-  </div>
+</div>
 
 <!-- @page_first -->
 <li><a href="%link%"><i class="fa fa-angle-double-left"></i></a></li>

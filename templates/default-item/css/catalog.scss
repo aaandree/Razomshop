@@ -313,6 +313,8 @@
       transform: translate(0, 1px);
 
     }
+
+    &__description{margin-bottom: 24px;}
   }
 
   .b-catalog-item__price{font-size:28px;}
@@ -395,4 +397,36 @@
 }
 .act-tabs .act-tab-panels .act-tab-panel.visible {
   display: block;
+}
+
+.b-categories{
+  margin-bottom: 54px;
+
+  ul{
+    margin: 0;
+    padding: 0;
+
+    ul {
+      margin-left: 24px;
+      a{
+        font-size: 18px;
+      }
+    }
+  }
+
+  li {
+    margin: 12px 0;
+    padding: 0;
+  }
+
+  a {
+    font-size: 24px;
+    &:hover{
+      border-bottom-width: 2px;
+    }
+  }
+}
+
+.b-searchresult {
+  .b-catalog-items li {width: 25%;}
 }

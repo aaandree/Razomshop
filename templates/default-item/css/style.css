@@ -2050,6 +2050,36 @@ blue: #00a8e6
     border-color: #02c1d3;
     color: #02c1d3; }
 
+input[type=checkbox].ms-checkbox {
+  position: absolute;
+  left: -9999px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0; }
+
+input[type=checkbox].ms-checkbox + label.ms-checklabel {
+  padding-left: 22px;
+  height: 20px;
+  display: inline-block;
+  line-height: 17px;
+  background-repeat: no-repeat;
+  background-image: url(../images/checkbox-stripe.png);
+  background-position: 0 0;
+  vertical-align: middle;
+  cursor: pointer; }
+
+input.ms-checkbox:checked + label.ms-checklabel {
+  background-position: 0 -40px; }
+
+.b-pagename {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 0 24px; }
+
 .b-menu {
   position: relative;
   height: 1%;
@@ -2372,6 +2402,8 @@ blue: #00a8e6
     -ms-transform: translate(0, 1px);
     -o-transform: translate(0, 1px);
     transform: translate(0, 1px); }
+  .b-product__btn__description {
+    margin-bottom: 24px; }
 .b-product .b-catalog-item__price {
   font-size: 28px; }
 .b-product__title {
@@ -2428,6 +2460,26 @@ blue: #00a8e6
 
 .act-tabs .act-tab-panels .act-tab-panel.visible {
   display: block; }
+
+.b-categories {
+  margin-bottom: 54px; }
+  .b-categories ul {
+    margin: 0;
+    padding: 0; }
+    .b-categories ul ul {
+      margin-left: 24px; }
+      .b-categories ul ul a {
+        font-size: 18px; }
+  .b-categories li {
+    margin: 12px 0;
+    padding: 0; }
+  .b-categories a {
+    font-size: 24px; }
+    .b-categories a:hover {
+      border-bottom-width: 2px; }
+
+.b-searchresult .b-catalog-items li {
+  width: 25%; }
 
 /* Clearfix
 ----------------------------------------------------------------------------------------------------*/

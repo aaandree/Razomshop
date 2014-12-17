@@ -234,3 +234,37 @@ blue: #00a8e6
 
 }
 
+input[type=checkbox].ms-checkbox {
+  position: absolute;
+  left: -9999px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+input[type=checkbox].ms-checkbox + label.ms-checklabel {
+  padding-left: 22px;
+  height: 20px;
+  display: inline-block;
+  line-height: 17px;
+  background-repeat: no-repeat;
+  background-image: url(../images/checkbox-stripe.png);
+  background-position: 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+input.ms-checkbox:checked + label.ms-checklabel {
+  background-position: 0 -40px;
+}
+
+.b-pagename {
+  font-size: 24px;
+  font-weight:bold;
+  margin:0 0 24px;
+}
+
+
