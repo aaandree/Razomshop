@@ -1,0 +1,11 @@
+User-Agent: *
+Disallow: /
+Disallow: /*?_openstat
+Disallow: /*index.html
+Disallow: /*index.php
+Disallow: /*?goto=
+Disallow: /&filterid=
+Disallow: /*?offset=
+Disallow: /*?popup-item=true
+Disallow: /*&published
+Disallow: /content/files/

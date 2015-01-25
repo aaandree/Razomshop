@@ -2003,7 +2003,7 @@ blue: #00a8e6
   margin-bottom: 9px; }
 
 .b-breadcrumbs {
-  margin: 36px 0 18px; }
+  margin: 18px 0 36px; }
   .b-breadcrumbs .-current {
     font-weight: bold; }
 
@@ -2074,7 +2074,8 @@ input[type=checkbox].ms-checkbox + label.ms-checklabel {
   cursor: pointer; }
 
 input.ms-checkbox:checked + label.ms-checklabel {
-  background-position: 0 -40px; }
+  background-position: 0 -40px;
+  color: #019baa; }
 
 .b-pagename {
   font-size: 24px;
@@ -2223,7 +2224,8 @@ input.ms-checkbox:checked + label.ms-checklabel {
       color: #000; }
     .b-catalog-item__price.-old {
       text-decoration: line-through;
-      font-size: 1em; }
+      font-size: 1em;
+      color: #ff4400; }
   .b-catalog-item__currency {
     font-size: 0.8em;
     font-weight: normal; }
@@ -2233,6 +2235,7 @@ input.ms-checkbox:checked + label.ms-checklabel {
     position: relative;
     height: 1%;
     margin-bottom: 9px;
+    padding: 18px 36px 0;
     overflow: hidden; }
     .b-catalog-item__picture img {
       max-width: 100%;
@@ -2249,11 +2252,11 @@ input.ms-checkbox:checked + label.ms-checklabel {
       -o-transform-origin: center 0;
       transform-origin: center 0; }
       .b-catalog-item:hover .b-catalog-item__picture img {
-        -webkit-transform: scale(1.2);
-        -moz-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        -o-transform: scale(1.2);
-        transform: scale(1.2); }
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1); }
   .b-catalog-item__zoom {
     position: absolute;
     bottom: 10px;
@@ -2294,7 +2297,8 @@ input.ms-checkbox:checked + label.ms-checklabel {
       border-bottom: 0; }
     .b-catalog__pagination li.-active {
       font-weight: bold;
-      margin: 0 10px; }
+      margin: 0 10px;
+      color: #019baa; }
 
 .b-filterpanel {
   margin-bottom: 54px; }
@@ -2306,6 +2310,9 @@ input.ms-checkbox:checked + label.ms-checklabel {
       margin-bottom: 9px; }
       .b-filterpanel__group__search .b-input {
         width: 100%; }
+    .b-filterpanel__group__list {
+      max-height: 200px;
+      overflow: auto; }
   .b-filterpanel__name {
     font-size: 10px;
     font-weight: bold;
@@ -2330,7 +2337,7 @@ input.ms-checkbox:checked + label.ms-checklabel {
     display: none; }
   .b-sidemenu .-active {
     position: relative; }
-    .b-sidemenu .-active ul {
+    .b-sidemenu .-active > ul {
       display: block; }
     .b-sidemenu .-active > a {
       font-weight: bold; }

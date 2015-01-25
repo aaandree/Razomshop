@@ -176,7 +176,7 @@ blue: #00a8e6
 
 
 .b-breadcrumbs{
-    margin:36px 0 18px;
+    margin:18px 0 36px;
 
     & .-current{
         font-weight:bold;
@@ -260,6 +260,7 @@ input[type=checkbox].ms-checkbox + label.ms-checklabel {
 
 input.ms-checkbox:checked + label.ms-checklabel {
   background-position: 0 -40px;
+  color: #019baa;
 }
 
 .b-pagename {
