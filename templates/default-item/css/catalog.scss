@@ -230,6 +230,7 @@
       font-weight:bold;
     }
 
+  > .-active {
     i {
       display: block;
       cursor: pointer;
@@ -248,6 +249,8 @@
       }
     }
   }
+
+  }
 }
 
 /* Slider size and handle placement;
@@ -258,15 +261,21 @@
 }
 .noUi-horizontal .noUi-handle {
   background: #ccc;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   left: -10px;
-  top: -9px;
-  border-radius: 20px;
+  top: -7px;
+  border-radius: 15px;
   cursor:pointer;
 
   &.noUi-active {
     background: #00a8e6;
+
+    width: 20px;
+    height: 20px;
+    top: -9px;
+    border-radius: 20px;
+    margin-left: -3px;
   }
 }
 .noUi-horizontal.noUi-extended {

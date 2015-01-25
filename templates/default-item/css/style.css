@@ -2341,7 +2341,7 @@ input.ms-checkbox:checked + label.ms-checklabel {
       display: block; }
     .b-sidemenu .-active > a {
       font-weight: bold; }
-    .b-sidemenu .-active i {
+    .b-sidemenu .-active > .-active i {
       display: block;
       cursor: pointer;
       font-style: normal;
@@ -2349,7 +2349,7 @@ input.ms-checkbox:checked + label.ms-checklabel {
       top: 10px;
       right: 0;
       line-height: 1; }
-      .b-sidemenu .-active i:after {
+      .b-sidemenu .-active > .-active i:after {
         content: "\f107";
         width: 20px;
         float: right;
@@ -2364,14 +2364,19 @@ input.ms-checkbox:checked + label.ms-checklabel {
 
 .noUi-horizontal .noUi-handle {
   background: #ccc;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   left: -10px;
-  top: -9px;
-  border-radius: 20px;
+  top: -7px;
+  border-radius: 15px;
   cursor: pointer; }
   .noUi-horizontal .noUi-handle.noUi-active {
-    background: #00a8e6; }
+    background: #00a8e6;
+    width: 20px;
+    height: 20px;
+    top: -9px;
+    border-radius: 20px;
+    margin-left: -3px; }
 
 .noUi-horizontal.noUi-extended {
   padding: 0 15px; }
