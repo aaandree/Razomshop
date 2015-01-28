@@ -10,8 +10,23 @@ body {
 }
 
     .b-slider__item {
+        position: relative;
+        overflow: hidden;
         border:0 none;
     }
+
+        .b-slider__item img {vertical-align: top;}
+
+        .b-slider__item__btn{
+            position: absolute;
+            text-decoration: none;
+            color: #fff !important;
+            border: solid 4px #fff !important;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            z-index:5;
+        }
 
 .b-slider .slidesjs-navigation {
     position:absolute;
